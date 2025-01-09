@@ -1,0 +1,113 @@
+body {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-container, 
+div:has(> input) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    width: 100%;
+}
+
+.labels {
+    color: gray;
+    display: block;
+    margin-bottom: 4px;
+}
+
+input {
+    width: 100%;
+    padding: 8px 40px 8px 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+span {
+    position: absolute;
+    right: 8px;
+    top: 69%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    position: static;
+    width: 24px;
+    height: 24px;
+}
+
+#btn {
+    color: white;
+    border: 1px solid blue;
+    background-color: blue;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#usernameValidator,
+#passwordValidator,
+#confpasswordValidator
+{
+    display: none;
+    color: red;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+
+#emailValidator{
+    display: none;
+    color: red;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        /* box-shadow: none; */
+        padding: 10px;
+    }
+    
+    .forms {
+        gap: 15px;
+    }
+}

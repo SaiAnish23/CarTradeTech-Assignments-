@@ -1,0 +1,15 @@
+.filter-header{
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 5px; */
+    align-items: center;
+  }
+  
+.filter-title{
+      display: flex;
+      align-items: center;
+    }
+  
+/* .clear-all{
+
+} */

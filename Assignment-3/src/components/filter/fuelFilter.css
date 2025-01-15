@@ -1,0 +1,24 @@
+.fuel-filter{
+
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fuel-filter-options{
+     margin-top: 5px;
+    display: flex;
+     flex-direction: column;
+     gap: 5px;
+}
+
+label{
+    color: #484848;
+}
+
+.label-container{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}

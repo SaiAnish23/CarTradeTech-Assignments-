@@ -1,0 +1,36 @@
+.slider-container {
+   margin-top: 25px;   
+   overflow: hidden; 
+  }
+
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+  }
+
+
+  .input-fields {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .number-input {
+    width: 96px;
+    padding: 8px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .number-input:focus {
+    outline: none;
+    border-color: #0d9488;
+  }
+
+  .separator {
+    color: #666;
+  }

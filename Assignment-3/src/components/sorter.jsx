@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 
-const Sorter = ({ onSort }) => {
+const Sorter = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch()
   // const sortDirection = useSelector(state => state.sortDirection)
@@ -22,9 +22,6 @@ const Sorter = ({ onSort }) => {
     setSelectedOption(option);
     dispatch(setPriceSort(option.value))
     setIsOpen(false);
-    if (onSort) {
-      onSort(option.value);
-    }
   };
 
   return (

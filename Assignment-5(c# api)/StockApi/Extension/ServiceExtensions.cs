@@ -20,7 +20,6 @@ namespace StockApi.Extension
             services.AddScoped<IStockService, StockService>();
             services.AddScoped<ISockRepository, StockRepository>();
             // Registering exception handler
-            // services.AddExceptionHandler<GlobalExceptionHandler>();
 
            
         }

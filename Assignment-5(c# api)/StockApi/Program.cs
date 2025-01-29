@@ -1,5 +1,6 @@
 
 using StockApi.Extension;
+using StockApi.Utils;
 
 
 
@@ -22,7 +23,6 @@ builder.Services.AddCustomServices(builder.Configuration);
 
 var app = builder.Build();
 
-// app.UseExceptionHandler();
 
 if (app.Environment.IsDevelopment())
 {
@@ -32,8 +32,8 @@ if (app.Environment.IsDevelopment())
 
 // app.UseHttpsRedirection();
 
-
-
+//  to implement exception handling middleware
+app.UseMiddleware<ExceptionHandlingMiddleware>(); 
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

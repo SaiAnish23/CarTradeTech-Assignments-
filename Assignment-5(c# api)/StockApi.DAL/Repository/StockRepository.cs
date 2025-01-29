@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using StockApi.DAL.Interface;
 using Dapper;
 using MySql.Data.MySqlClient;
-using System.Security;
 using StockApi.DAL.Entities;
-using System.Diagnostics.CodeAnalysis;
-// using StockApi.DAL.Utils;
+using StockApi.DAL.Utils;
 
 namespace StockApi.DAL.Repository
 {
@@ -24,7 +18,7 @@ namespace StockApi.DAL.Repository
 
         }
 
-
+        // Dapper by defeault handles SQL injection by using parameterized queries.
         public async Task<IEnumerable<StockEntity>> GetStocks(Filters filters)
         {
 
@@ -32,7 +26,6 @@ namespace StockApi.DAL.Repository
             {
 
                 connection.Open();
-                    // throw new CustomException("This is a bad request", 400);
 
                 var sql = @"
              SELECT *
@@ -56,6 +49,13 @@ namespace StockApi.DAL.Repository
 
 
                 var stocks = await connection.QueryAsync<StockEntity>(sql, parameters);
+
+
+                if (stocks == null)
+                {
+                    throw new CustomException("No stocks found", 404);
+                }
+
                 return stocks;
 
             }
@@ -64,29 +64,39 @@ namespace StockApi.DAL.Repository
 
         public async Task<StockEntity> GetStockById(int id)
         {
+
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-                var sql = @" SELECT * FROM Stocks WHERE Id = @Id";
+
+                var sql = "SELECT * FROM Stocks WHERE Id = @Id";
                 var stock = await connection.QueryFirstOrDefaultAsync<StockEntity>(sql, new { Id = id });
+
+                if (stock == null)
+                {
+                    throw new CustomException($"Stock with ID {id} not found", 404);
+                }
+
                 return stock;
-
             }
-
-
         }
 
 
         public async Task<StockEntity> CreateStock(StockEntity stock)
         {
+            if (stock == null)
+            {
+                throw new CustomException("Stock data cannot be null", 400);
+            }
+
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
 
                 var sql = @"
-            INSERT INTO Stocks (MakeName, ModelName, MakeYear, Price, Km, Color, Year, Fuel)
-            VALUES (@MakeName, @ModelName, @MakeYear, @Price, @Km, @Color, @Year, @Fuel);
-            SELECT LAST_INSERT_ID();";
+                INSERT INTO Stocks (MakeName, ModelName, MakeYear, Price, Km, Color, Year, Fuel)
+                VALUES (@MakeName, @ModelName, @MakeYear, @Price, @Km, @Color, @Year, @Fuel);
+                SELECT LAST_INSERT_ID();";
 
                 var parameters = new
                 {
@@ -103,9 +113,7 @@ namespace StockApi.DAL.Repository
                 var newStockId = await connection.ExecuteScalarAsync<int>(sql, parameters);
                 return await GetStockById(newStockId);
             }
-
         }
-
 
 
 
@@ -171,19 +179,20 @@ namespace StockApi.DAL.Repository
                     parameters.Add("Fuel", stock.Fuel.Value.ToString());
                 }
 
+                if (!updateFields.Any())
+                {
+                    throw new CustomException("No valid fields provided for update", 400);
+                }
+
                 var updateQuery = $"UPDATE Stocks SET {string.Join(", ", updateFields)} WHERE Id = @Id";
 
                 await connection.ExecuteAsync(updateQuery, parameters);
 
                 return await connection.QueryFirstOrDefaultAsync<StockEntity>(
                     "SELECT * FROM Stocks WHERE Id = @Id", new { Id = id });
-
-
-
-
-
             }
         }
+
 
 
         public async Task<int> DeleteStock(int id)
@@ -191,12 +200,22 @@ namespace StockApi.DAL.Repository
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-                var sql = @"DELETE FROM Stocks WHERE Id = @Id";
+
+                var existingStock = await connection.QueryFirstOrDefaultAsync<StockEntity>(
+                    "SELECT * FROM Stocks WHERE Id = @Id", new { Id = id });
+
+                if (existingStock == null)
+                {
+                    throw new CustomException($"Stock with ID {id} not found", 404);
+                }
+
+                var sql = "DELETE FROM Stocks WHERE Id = @Id";
                 var affectedRows = await connection.ExecuteAsync(sql, new { Id = id });
+
                 return affectedRows;
             }
-
         }
+
 
     }
 

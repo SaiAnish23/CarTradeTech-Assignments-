@@ -28,8 +28,7 @@ namespace StockApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetStocks([FromQuery] QueryDto query)
         {
-            try
-            {
+          
                 var filters = _mapper.Map<QueryDto, Filters>(query);
                 var stocks = await _stockService.GetStocks(filters);
                 var stockDtos = _mapper.Map<IEnumerable<StockDto>>(stocks);
@@ -42,20 +41,15 @@ namespace StockApi.Controllers
 
 
                 return Ok(ResponseHandler.Success(stockDtos, "Stocks retrieved successfully", 200));
-            }
-            catch (System.Exception)
-            {
-
-                return StatusCode(500, ResponseHandler.Fail<StockEntity>("Internal Server Error", 500));
-            }
+            
+          
 
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            try
-            {
+           
                 var stock = await _stockService.GetStockById(id);
                 if (stock == null)
                 {
@@ -66,11 +60,8 @@ namespace StockApi.Controllers
                 stockDto.IsValueForMoney = _stockService.IsValueForMoney(stockDto.Price, stockDto.Km);
 
                 return Ok(ResponseHandler.Success(stockDto, "Stock retrieved successfully", 200));
-            }
-            catch (System.Exception)
-            {
-                return StatusCode(500, ResponseHandler.Fail<StockEntity>("Internal Server Error", 500));
-            }
+            
+        
         }
 
 
@@ -79,20 +70,16 @@ namespace StockApi.Controllers
         {
 
 
-            try
-            {
+            
+         
                 var stock = _mapper.Map<StockEntity>(stockDto);
                 var result = await _stockService.CreateStock(stock);
                 var createdStock = _mapper.Map<StockDto>(result);
                 createdStock.IsValueForMoney = _stockService.IsValueForMoney(createdStock.Price, createdStock.Km);
                 return Ok(ResponseHandler.Success(createdStock, "Stock created successfully", 201));
 
-            }
-            catch (System.Exception)
-            {
-
-                return StatusCode(500, ResponseHandler.Fail<StockEntity>("Internal Server Error", 500));
-            }
+            
+            
 
 
         }
@@ -100,8 +87,7 @@ namespace StockApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            try
-            {
+           
                 var result = await _stockService.DeleteStock(id);
                 if (result == 0)
                 {
@@ -109,13 +95,9 @@ namespace StockApi.Controllers
                 }
 
                 return Ok(ResponseHandler.Success(result, "Stock deleted successfully", 200));
-            }
-            catch (System.Exception)
-            {
+            
 
-                return StatusCode(500, ResponseHandler.Fail<StockEntity>("Internal Server Error", 500));
-            }
-
+       
 
         }
 
@@ -124,20 +106,16 @@ namespace StockApi.Controllers
         public async Task<IActionResult> Update(int id, [FromBody] UpdateStockDto stockDto)
         {
 
-            try
-            {
+            
+        
                 var stock = _mapper.Map<StockEntity>(stockDto);
                 var result = await _stockService.UpdateStock(id, stock);
                 var updatedStock = _mapper.Map<StockDto>(result);
                 updatedStock.IsValueForMoney = _stockService.IsValueForMoney(updatedStock.Price, updatedStock.Km);
                 return Ok(ResponseHandler.Success(updatedStock, "Stock updated successfully", 200));
 
-            }
-            catch (System.Exception)
-            {
+    
 
-                return StatusCode(500, ResponseHandler.Fail<StockEntity>("Internal Server Error", 500));
-            }
         }
 
     }

@@ -8,6 +8,7 @@ namespace StockApi.DAL.Entities
 {
     public class StockEntity
     {
+        
         public int Id { get; set; }
         public string? MakeName { get; set; }
         public string? ModelName { get; set; }

@@ -110,6 +110,7 @@ namespace StockApi.Controllers
         
                 var stock = _mapper.Map<StockEntity>(stockDto);
                 var result = await _stockService.UpdateStock(id, stock);
+                // Console.WriteLine(result);
                 var updatedStock = _mapper.Map<StockDto>(result);
                 updatedStock.IsValueForMoney = _stockService.IsValueForMoney(updatedStock.Price, updatedStock.Km);
                 return Ok(ResponseHandler.Success(updatedStock, "Stock updated successfully", 200));

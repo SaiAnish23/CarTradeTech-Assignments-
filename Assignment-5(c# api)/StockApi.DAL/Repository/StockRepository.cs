@@ -84,6 +84,7 @@ namespace StockApi.DAL.Repository
 
         public async Task<StockEntity> CreateStock(StockEntity stock)
         {
+
             if (stock == null)
             {
                 throw new CustomException("Stock data cannot be null", 400);
@@ -192,8 +193,6 @@ namespace StockApi.DAL.Repository
                     "SELECT * FROM Stocks WHERE Id = @Id", new { Id = id });
             }
         }
-
-
 
         public async Task<int> DeleteStock(int id)
         {

@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using StockApi.DAL.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace StockApi.DAL.Entities
 {
@@ -10,15 +7,35 @@ namespace StockApi.DAL.Entities
     {
         
         public int Id { get; set; }
-        public string? MakeName { get; set; }
-        public string? ModelName { get; set; }
-        public int? MakeYear { get; set; }
-        public decimal?  Price { get; set; }
-
-        public decimal? Km { get; set; }
-        public string? Color { get; set; }
-        public int? Year { get; set; }
         
+        [Required]
+        [MaxLength(50)]
+        public string? MakeName { get; set; }
+
+        [Required]
+        public string? ModelName { get; set; }
+
+        [Required]
+        [Range(1900, 2100)]
+        public int? MakeYear { get; set; }
+
+        [Required]
+        [Range(0, double.MaxValue)]
+        public decimal?  Price { get; set; }
+        
+        [Required]
+        [Range(0, double.MaxValue)]
+        public decimal? Km { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string? Color { get; set; }
+
+        [Required]
+        [Range(1900, 2100)]
+        public int? Year { get; set; }
+        [Required]
+        [Range(0, double.MaxValue)]
         public Fuels? Fuel { get; set; }
     }
 }

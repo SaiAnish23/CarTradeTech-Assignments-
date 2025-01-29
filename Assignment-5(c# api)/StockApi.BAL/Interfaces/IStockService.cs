@@ -8,7 +8,7 @@ namespace StockApi.BAL.Interfaces
 
         Task<IEnumerable<StockEntity>> GetStocks (Filters filters);
 
-        bool IsValueForMoney(decimal? price, decimal? km);
+        bool IsValueForMoney(decimal price, decimal km);
 
         Task<StockEntity> GetStockById(int id);
 

@@ -43,7 +43,7 @@ namespace StockApi.BAL.Services
         }
 
 
-        public bool IsValueForMoney(decimal? price, decimal? km)
+        public bool IsValueForMoney(decimal price, decimal km)
         {
             if (price < 200000 && km < 10000)
             {

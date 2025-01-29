@@ -1,0 +1,13 @@
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\bin\Debug\net9.0\StockApi.DAL.deps.json
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\bin\Debug\net9.0\StockApi.DAL.dll
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\bin\Debug\net9.0\StockApi.DAL.pdb
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.csproj.AssemblyReference.cache
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.AssemblyInfoInputs.cache
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.AssemblyInfo.cs
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.csproj.CoreCompileInputs.cache
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.sourcelink.json
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.dll
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\refint\StockApi.DAL.dll
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\StockApi.DAL.pdb
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.DAL\obj\Debug\net9.0\ref\StockApi.DAL.dll

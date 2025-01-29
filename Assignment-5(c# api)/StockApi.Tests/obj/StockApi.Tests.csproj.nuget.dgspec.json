@@ -1,0 +1,358 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.Tests\\StockApi.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\StockApi.BAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\StockApi.BAL.csproj",
+        "projectName": "StockApi.BAL",
+        "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\StockApi.BAL.csproj",
+        "packagesPath": "C:\\Users\\sai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj": {
+                "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Mysql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj",
+        "projectName": "StockApi.DAL",
+        "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj",
+        "packagesPath": "C:\\Users\\sai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Mysql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.Tests\\StockApi.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.Tests\\StockApi.Tests.csproj",
+        "projectName": "StockApi.Tests",
+        "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.Tests\\StockApi.Tests.csproj",
+        "packagesPath": "C:\\Users\\sai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\StockApi.BAL.csproj": {
+                "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\StockApi.BAL.csproj"
+              },
+              "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj": {
+                "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj"
+              },
+              "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi\\StockApi.csproj": {
+                "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi\\StockApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi\\StockApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi\\StockApi.csproj",
+        "projectName": "StockApi",
+        "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi\\StockApi.csproj",
+        "packagesPath": "C:\\Users\\sai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\StockApi.BAL.csproj": {
+                "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.BAL\\StockApi.BAL.csproj"
+              },
+              "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj": {
+                "projectPath": "C:\\Users\\sai\\Desktop\\Assignments-New\\CarTradeTech-Assignments-\\Assignment-5(c# api)\\StockApi.DAL\\StockApi.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Automapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

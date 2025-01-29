@@ -1,0 +1,16 @@
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\bin\Debug\net9.0\StockApi.BAL.deps.json
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\bin\Debug\net9.0\StockApi.BAL.dll
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\bin\Debug\net9.0\StockApi.BAL.pdb
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\bin\Debug\net9.0\StockApi.DAL.dll
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\bin\Debug\net9.0\StockApi.DAL.pdb
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.csproj.AssemblyReference.cache
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.AssemblyInfoInputs.cache
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.AssemblyInfo.cs
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.csproj.CoreCompileInputs.cache
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.sourcelink.json
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.9FF1AA84.Up2Date
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.dll
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\refint\StockApi.BAL.dll
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\StockApi.BAL.pdb
+C:\Users\sai\Desktop\Assignments-New\CarTradeTech-Assignments-\Assignment-5(c# api)\StockApi.BAL\obj\Debug\net9.0\ref\StockApi.BAL.dll

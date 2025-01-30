@@ -1,6 +1,8 @@
 
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 using StockApi.Extension;
-using StockApi.Utils;
+using StockApi.Middleware;
 
 
 
@@ -10,6 +12,11 @@ builder.Services.AddControllers()
     {
         options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
     });
+
+
+
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

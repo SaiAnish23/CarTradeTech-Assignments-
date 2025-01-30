@@ -2,7 +2,8 @@ using StockApi.DAL.Interface;
 using Dapper;
 using MySql.Data.MySqlClient;
 using StockApi.DAL.Entities;
-using StockApi.DAL.Utils;
+using System.Diagnostics;
+using System.ComponentModel.DataAnnotations;
 
 namespace StockApi.DAL.Repository
 {
@@ -14,6 +15,7 @@ namespace StockApi.DAL.Repository
 
         public StockRepository(string connectionString)
         {
+
             _connectionString = connectionString;
 
         }
@@ -52,8 +54,9 @@ namespace StockApi.DAL.Repository
 
 
                 if (stocks == null)
-                {
-                    throw new CustomException("No stocks found", 404);
+                {   // throwing the exception it will get catched by the middleware and sent to the client in json format
+                    // with the correct  status code and message in the response 
+                    throw new KeyNotFoundException("No stocks found");
                 }
 
                 return stocks;
@@ -64,17 +67,16 @@ namespace StockApi.DAL.Repository
 
         public async Task<StockEntity> GetStockById(int id)
         {
-
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-
                 var sql = "SELECT * FROM Stocks WHERE Id = @Id";
                 var stock = await connection.QueryFirstOrDefaultAsync<StockEntity>(sql, new { Id = id });
 
                 if (stock == null)
                 {
-                    throw new CustomException($"Stock with ID {id} not found", 404);
+
+                    throw new KeyNotFoundException($"Stock with ID {id} not found");
                 }
 
                 return stock;
@@ -85,14 +87,17 @@ namespace StockApi.DAL.Repository
         public async Task<StockEntity> CreateStock(StockEntity stock)
         {
 
-            if (stock == null)
-            {
-                throw new CustomException("Stock data cannot be null", 400);
-            }
 
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
+
+                if (stock == null)
+                {   // throwing the exception it will get catched by the middleware and sent to the client in json format
+                    // with the correct  status code and message in the response
+                    throw new ValidationException("Stock is null");
+                }
+
 
                 var sql = @"
                 INSERT INTO Stocks (MakeName, ModelName, MakeYear, Price, Km, Color, Year, Fuel)
@@ -129,7 +134,7 @@ namespace StockApi.DAL.Repository
 
                 if (existingStock == null)
                 {
-                    return null;
+                    throw new  KeyNotFoundException($"Stock with ID {id} not found");
                 }
 
 
@@ -182,7 +187,7 @@ namespace StockApi.DAL.Repository
 
                 if (!updateFields.Any())
                 {
-                    throw new CustomException("No valid fields provided for update", 400);
+                    throw new ValidationException("No fields to update");
                 }
 
                 var updateQuery = $"UPDATE Stocks SET {string.Join(", ", updateFields)} WHERE Id = @Id";
@@ -205,7 +210,7 @@ namespace StockApi.DAL.Repository
 
                 if (existingStock == null)
                 {
-                    throw new CustomException($"Stock with ID {id} not found", 404);
+                    throw new KeyNotFoundException($"Stock with ID {id} not found");
                 }
 
                 var sql = "DELETE FROM Stocks WHERE Id = @Id";

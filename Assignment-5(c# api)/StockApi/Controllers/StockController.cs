@@ -38,8 +38,6 @@ namespace StockApi.Controllers
                 {
                     stock.IsValueForMoney = _stockService.IsValueForMoney(stock.Price, stock.Km);
                 }
-
-
                 return Ok(ResponseHandler.Success(stockDtos, "Stocks retrieved successfully", 200));
             
           
